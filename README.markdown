@@ -38,9 +38,7 @@ CakePlugin::loadAll();
 ```
 
 **Required:** Set your Quickpay merchant(quickpay_id), MD5 secret key:
-		
-		// if apikey is set in bootstrap.php, use it. otherwise, NULL.
-		$apikey = Configure::read('Quickpay.apikey');
+
 ```php
 <?php
 Configure::write('Quickpay.quickpay_id', 'yourQuickpayQuickpayIdHere');
