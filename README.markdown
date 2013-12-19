@@ -1,7 +1,9 @@
-CakePHP Quickpay Component
+CakePHP Quickpay Plugin
 ========================
 
-This is a simple component that interfaces a CakePHP app with Quickpay's PHP API.
+This is a simple component and helper that interfaces a CakePHP app with Quickpay's PHP API based on Quickpay API php library.<br/>
+This plugin works with the QuickPay API for the version greater than 5 protocol.<br/>
+Technical documentation can be located at http://doc.quickpay.net/
 
 Compatibility:
 --------------
@@ -13,10 +15,10 @@ Installation:
 
 **Using git:**
 
-You will need the component (packaged as a plugin), and Quickpay's PHP library (not included). Using git, 
+You will need the plugin. Using git, 
 something like this:
 
-	git clone git@github.com:miheretab/CakePHP-QuickpayComponent-Plugin.git APP/Plugin/Quickpay  
+	git clone git@github.com:miheretab/CakePHP-Quickpay-Plugin.git APP/Plugin/Quickpay  
 
 Configuration:
 --------------
@@ -42,14 +44,14 @@ CakePlugin::loadAll();
 ```php
 <?php
 Configure::write('Quickpay.quickpay_id', 'yourQuickpayQuickpayIdHere');
-Configure::write('Stripe.secret', 'yourQuickpayMD5SecretKeyHere');
+Configure::write('Quickpay.secret', 'yourQuickpayMD5SecretKeyHere');
 ```
 
 **Optional:** Set Quickpay mode, either Live(0) or Test(1). Defaults to Test(1) if not set.
 
 ```php
 <?php
-Configure::write('Stripe.testmode', 1);
+Configure::write('Quickpay.testmode', 1);
 ```
 
 **Optional:** Set the Quickpay apikey.  Default apikey NULL
@@ -58,7 +60,7 @@ if you haven't whitelisted your servers IP in the QuickPay Manager
 
 ```php
 <?php
-Configure::write('Stripe.apikey', 'yourQuickpayAPIKeyHere');
+Configure::write('Quickpay.apikey', 'yourQuickpayAPIKeyHere');
 ```
 
 Usage

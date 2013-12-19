@@ -9,9 +9,7 @@
  * @package		QuickpayHelper
  * @author		Miheretab Alemu <mihrtab@gmail.com>
  * @license		MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @link		https://github.com/miheretab/CakePHP-QuickpayComponent-Plugin
- * This component works with the QuickPay API for the version greater than 5 protocol.
- * Technical documentation can be located at http://doc.quickpay.net/
+ * @link		https://github.com/miheretab/CakePHP-Quickpay-Plugin
  */
 App::uses('Helper', 'View');
 
@@ -26,7 +24,7 @@ class QuickpayHelper extends Helper {
  * @var string
  * @access private
  */
-	private $secret, 
+	private $secret;
 /**
  * your Quickpay merchant ID (quickpay ID)
  *
